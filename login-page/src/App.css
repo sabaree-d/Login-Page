@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+.input-container {
+  margin-bottom: 10px;
+}
+
+.tooltip {
+  position: absolute;
+  background-color: white;
+  border: 1px solid orange;
+  padding: 5px;
+  border-radius: 5px;
+  bottom: -45px;
+  left: calc(50% - 70px); /* Adjust as necessary */
+  visibility: hidden;
+  z-index: 999;
+}
+
+.tooltip.show {
+  visibility: visible;
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -15px; /* Adjust to position the icon */
+  width: 20px; /* Adjust the size of the icon */
+  height: 20px; /* Adjust the size of the icon */
+  background-color: orange;
+  border-radius: 3px;
+}
+
+.tooltip::after {
+  content: "!";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: white;
+}
